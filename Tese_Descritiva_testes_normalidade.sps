@@ -5,7 +5,7 @@
  * -------------------------------------------------------------------------------------------
 
 GET
-  FILE='C:\Users\Paulo\Google Drive\Doutorado\Tese\SPSS\Tese.sav'.
+  FILE='C:\Users\Paulo\Google Drive\Doutorado\Tese\SPSS\Tese_Dados.sav'.
 DATASET NAME Tese WINDOW=FRONT.
 
 DATASET ACTIVATE Tese.
@@ -17,6 +17,14 @@ FREQUENCIES VARIABLES=Sex
 
 DESCRIPTIVES VARIABLES=Age Education
   /STATISTICS=MEAN STDDEV MIN MAX.
+
+SORT CASES  BY Sex.
+SPLIT FILE LAYERED BY Sex.
+
+DESCRIPTIVES VARIABLES=Age Education
+  /STATISTICS=MEAN STDDEV MIN MAX.
+
+SPLIT FILE OFF.
 
 * --- BIS-11
 
@@ -98,3 +106,4 @@ EXAMINE VARIABLES=mAC sdAC pMOBILE pWAKE A_pACTIVE R_pREST S_pSLEEP S_mDuration 
   /CINTERVAL 95
   /MISSING LISTWISE
   /NOTOTAL.
+
