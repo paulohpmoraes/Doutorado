@@ -1,2 +1,2 @@
-# tese
-Rotinas em R utilizados na tese de doutorado
+# Tese
+Rotinas em R, scripts e outputs do SPPS da tese de doutorado.
